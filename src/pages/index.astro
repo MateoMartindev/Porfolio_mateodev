@@ -1,11 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Badge from "../components/Badge.astro"
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Portfolio</h1>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1 
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10" >
+					Hola👋, Soy Mateodev
+					<a 
+					href="https://linkedin.com/in/mateomartindev" 
+					target="_blank" 
+					rel="noopener"
+					class="flex justify-center items-center ">
+					<Badge>Disponible para trabajar</Badge></>
+			</h1>
+			<h2 class="text-xl opacity-80">
+				+2 Años de experiencia. Desarrollador web. De Bogotá Colombia. Especializado en crear aplicaciones únicas
+			</h2>
+		</section>
 	</main>
 </Layout>
 

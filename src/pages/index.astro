@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from "../components/Badge.astro"
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import SocialMd from "../components/SocialMd.astro"
 ---
 
 <Layout title="Welcome to Astro.">
@@ -17,9 +19,19 @@ import Badge from "../components/Badge.astro"
 					class="flex justify-center items-center ">
 					<Badge>Disponible para trabajar</Badge></>
 			</h1>
-			<h2 class="text-xl opacity-80">
-				+2 Años de experiencia. Desarrollador web. De Bogotá Colombia. Especializado en crear aplicaciones únicas
+			<h2 class="text-2xl  text-wrap">
+				<span class="text-yellow-200/90" class="opacity-80">+2 Años de experiencia.</span> 
+				<span class="text-blue-300/100 ">Desarrollador web </span>. 
+				<span>De Bogotá Colombia.</span> Especializado en crear aplicaciones únicas
 			</h2>
+			<nav class="flex gap-x-2">
+					<SocialMd>
+						<LinkedInIcon class="w-6 h-6"/>
+						LinkedIn
+					</SocialMd>
+					 
+				
+			</nav>
 		</section>
 	</main>
 </Layout>

@@ -4,9 +4,12 @@ import Card from '../components/Card.astro';
 import Badge from "../components/Badge.astro"
 import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import SocialMd from "../components/SocialMd.astro"
+import GitHubIcon from '../components/icons/GitHub.astro';
+import MailIcon from "../components/icons/Mail.astro"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portfolio Mateodev - Desarrolador y programador web 2 años de experiencia"
+		description="Contratar para crear tu aplicación web o móvil">
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto py-44">
 			<h1 
@@ -17,18 +20,32 @@ import SocialMd from "../components/SocialMd.astro"
 					target="_blank" 
 					rel="noopener"
 					class="flex justify-center items-center ">
-					<Badge>Disponible para trabajar</Badge></>
+					<Badge>Disponible para trabajar</Badge></a>
 			</h1>
-			<h2 class="text-2xl  text-wrap">
+			<h2 class="text-2xl text-wrap">
 				<span class="text-yellow-200/90" class="opacity-80">+2 Años de experiencia.</span> 
 				<span class="text-blue-300/100 ">Desarrollador web </span>. 
 				<span>De Bogotá Colombia.</span> Especializado en crear aplicaciones únicas
 			</h2>
-			<nav class="flex gap-x-2">
-					<SocialMd>
-						<LinkedInIcon class="w-6 h-6"/>
-						LinkedIn
+			<nav class="flex gap-x-4 mt-8">
+					<SocialMd 
+						href="https://linkedin.com/in/mateomartindev">
+						<LinkedInIcon class="size-6" />
+							LinkedIn
 					</SocialMd>
+					<SocialMd 
+						href="https://github.com/MateoMartindev"
+						>
+						<GitHubIcon class="size-6" />
+						Github
+					</SocialMd>
+					<SocialMd 
+						href="https://github.com/MateoMartindev"
+						>
+						<MailIcon class="size-6" />
+						mateomdev7@gmail.com
+					</SocialMd>
+
 					 
 				
 			</nav>

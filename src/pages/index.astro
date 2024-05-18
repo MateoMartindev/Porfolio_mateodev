@@ -6,12 +6,15 @@ import LinkedInIcon from '../components/icons/LinkedIn.astro';
 import SocialMd from "../components/SocialMd.astro"
 import GitHubIcon from '../components/icons/GitHub.astro';
 import MailIcon from "../components/icons/Mail.astro"
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro'
+import BriefCaseIcon from '../components/BriefCase.astro';
 ---
 
 <Layout title="Portfolio Mateodev - Desarrolador y programador web 2 años de experiencia"
 		description="Contratar para crear tu aplicación web o móvil">
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
+		<SectionContainer class="py-44 pb-20">
 			<h1 
 				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10" >
 					Hola👋, Soy Mateodev
@@ -49,7 +52,17 @@ import MailIcon from "../components/icons/Mail.astro"
 					 
 				
 			</nav>
-		</section>
+		</SectionContainer>
+		<SectionContainer class="">
+			
+			<h2
+				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCaseIcon class="size-7"/>
+				Experiencia laboral
+
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
 

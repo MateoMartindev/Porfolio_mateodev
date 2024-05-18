@@ -9,14 +9,17 @@ import MailIcon from "../components/icons/Mail.astro"
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro'
 import BriefCaseIcon from '../components/BriefCase.astro';
+import Footer from '../components/Footer.astro';
+import CodeIcon from '../components/icons/Code.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Portfolio Mateodev - Desarrolador y programador web 2 años de experiencia"
 		description="Contratar para crear tu aplicación web o móvil">
-	<main>
-		<SectionContainer class="py-44 pb-20">
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
 			<h1 
-				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10" >
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10" >
 					Hola👋, Soy Mateodev
 					<a 
 					href="https://linkedin.com/in/mateomartindev" 
@@ -25,27 +28,27 @@ import BriefCaseIcon from '../components/BriefCase.astro';
 					class="flex justify-center items-center ">
 					<Badge>Disponible para trabajar</Badge></a>
 			</h1>
-			<h2 class="text-2xl text-wrap">
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
 				<span class="text-yellow-200/90" class="opacity-80">+2 Años de experiencia.</span> 
 				<span class="text-blue-300/100 ">Desarrollador web </span>. 
 				<span>De Bogotá Colombia.</span> Especializado en crear aplicaciones únicas
 			</h2>
-			<nav class="flex gap-x-4 mt-8">
+			<nav class="flex gap-4 mt-8 flex-wrap">
 					<SocialMd 
 						href="https://linkedin.com/in/mateomartindev">
-						<LinkedInIcon class="size-6" />
+						<LinkedInIcon class="size-4 md:size-6" />
 							LinkedIn
 					</SocialMd>
 					<SocialMd 
 						href="https://github.com/MateoMartindev"
 						>
-						<GitHubIcon class="size-6" />
+						<GitHubIcon class="size-4 md:size-6" />
 						Github
 					</SocialMd>
 					<SocialMd 
-						href="https://github.com/MateoMartindev"
+						href="mailto:mateomdev7@gmail.com"
 						>
-						<MailIcon class="size-6" />
+						<MailIcon class="size-4 md:size-6" />
 						mateomdev7@gmail.com
 					</SocialMd>
 
@@ -53,15 +56,29 @@ import BriefCaseIcon from '../components/BriefCase.astro';
 				
 			</nav>
 		</SectionContainer>
-		<SectionContainer class="">
+		<SectionContainer id="experiencia" class="">
 			
 			<h2
-				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<BriefCaseIcon class="size-7"/>
 				Experiencia laboral
 
 			</h2>
 			<Experience />
+		</SectionContainer>
+		<SectionContainer id="experiencia" class="">
+			
+			<h2
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
+				Projectos
+
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+		<SectionContainer>
+			<Footer />
 		</SectionContainer>
 	</main>
 </Layout>

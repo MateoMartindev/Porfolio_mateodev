@@ -1,0 +1,28 @@
+---
+const PROJECTS = [
+  {
+    title: "Spotify maquetización",
+    description: "This is a description of Project One. It includes details about the project, its purpose, and how it was built.",
+    link: "https://example.com/project-one",
+    github: "https://github.com/username/project-one",
+    image: "/projects/sptreact.webp",
+    tags: ["HTML", "CSS", "React"]
+  }
+]
+---
+{
+    PROJECTS.map(({ title, image, description, tags}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-blue-300/100 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul>
+                {
+                    tags.map(tag => (
+                        <li>{tag}</li>
+                    ))
+                }
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura pantalla del proyyecto ${image}`}>
+        </article>
+    ))
+}

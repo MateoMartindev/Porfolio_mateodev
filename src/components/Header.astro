@@ -1,16 +1,45 @@
-<header class="flex justify-between items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <img 
-    class="rounded-full w-12 h-13" 
-    src="/public/png_phto.png" 
-    alt="mateomdev photo"
-    />
 
-    <nav class="flex flex-row opacity-80">
-        <a class="px-2 md:px-5" href="/">Inicio</a>
-        <a class="px-2 md:px-5" href="#experiencia">Experiencia</a>
-        <a class="px-2 md:px-5" href="#projectos">Projectos</a>
-        <a class="px-2 md:px-5" href="#sobre-mi">Acerca</a>
-        <a class="px-2 md:px-5" href="#contacto">Contacto</a>
+<style>
+    .navbarscrolled {
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+
+    .bg-scrolled {
+        background-color: rgb(255 255 255 / .5);
+        backdrop-filter: blur(8px);
+        border: 1px;
+        border-style: solid; 
+        border-radius: 20px;
+        border-color: #ffffff1a;
+        opacity: .990;
+        
+    }
+</style>
+
+<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
+
+    <nav id="navbar" class="navbarscrolled bg-default flex flex-row opacity-80 mt-6 px-2 py-1 fixed text-white rounded-3xl">
+        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="/">Inicio</a>
+        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#experiencia">Experiencia</a>
+        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#projectos">Proyectos</a>
+        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#sobre-mi">Acerca</a>
+        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#contacto">Contacto</a>
     </nav>
-
 </header>
+
+
+<script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (navbar) { // Verificación para asegurar que navbar no es nulo
+                if (window.scrollY > 0) {
+                    navbar.classList.add('bg-scrolled');
+                    navbar.classList.remove('bg-default');
+                } else {
+                    navbar.classList.add('bg-default');
+                    navbar.classList.remove('bg-scrolled');
+                }
+            }
+        });
+</script>

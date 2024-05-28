@@ -12,12 +12,14 @@ import BriefCaseIcon from '../components/BriefCase.astro';
 import Footer from '../components/Footer.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import Projects from '../components/Projects.astro';
+import Studies from '../components/Studies.astro';
+import SchoolIcon from '../components/icons/SchoolIcon.astro'
 ---
 
 
 <Layout title="Portfolio Mateodev - Desarrolador y programador web 2 años de experiencia"
 		description="Contratar para crear tu aplicación web o móvil">
-	<main class="px-4">
+	<main id="inicioporfolio" class="px-4">
 		<SectionContainer class="py-20 pb-32">
 			<div class="max-w-xl mb-4">
 				<div class="flex gap-4 mb-4">
@@ -80,7 +82,7 @@ import Projects from '../components/Projects.astro';
 			</h2>
 			<Experience />
 		</SectionContainer>
-		<SectionContainer id="experiencia" class="">
+		<SectionContainer id="proyectos" class="">
 			
 			<h2
 				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
@@ -89,6 +91,17 @@ import Projects from '../components/Projects.astro';
 
 			</h2>
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="estudios" class="">
+			
+			<h2
+				class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<SchoolIcon class="size-7"/>
+				Estudios
+
+			</h2>
+			<Studies />
 		</SectionContainer>
 
 		<SectionContainer>

@@ -1,18 +1,18 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
 
-const EXPERIENCE = [
+import StudiesItem from "./StudiesItem.astro";
+
+const STUDIES = [
   {
-    title: 'Desarrollador web',
-    description: `
+    title: 'Bootcamp Frontend',
+    formation: `
     Desarrollador frontend especializado en WordPress. Experiencia en la implementación de plantillas y plugins para landing pages y sitios de comercio electrónico. Habilidad en personalización y optimización de rendimiento. Destacado por mejorar la funcionalidad y estética de tiendas en línea, manteniendo altos estándares de calidad en colaboración con el equipo.
     `,
     time: 'Febrero 2021 - Febrero 2024',
-    company: 'Serviwebkr'
   },
   {
-    title: 'Practicante ingeniería sistemas',
-    description: `
+    title: 'Profesional Ingeniería de sistemas',
+    formation: `
       Desarrollo de dashboards interactivos utilizando HTML, CSS y JavaScript.
       Diseñé interfaces atractivas con Figma para una experiencia de usuario
       optimizada.
@@ -22,16 +22,15 @@ const EXPERIENCE = [
       y gestionar indicadores clave de rendimiento.
     `,
     time: 'Febrero 2022 - Diciembre 2022',
-    company: 'Banco de la república'
   }
 ];
 ---
 <ol class="relative border-s border-gray-200 ml-3">            
   {
 
-      EXPERIENCE.map(experience=> (
+      STUDIES.map(studies=> (
         <li class="mb-10 ms-4">
-          <ExperienceItem {... experience}/>
+          <StudiesItem {... studies}/>
         </li>
 
     ))

@@ -2,6 +2,8 @@
 import HtmlIcon from './icons/HtmlIcon.astro'
 import CssIcon from './icons/CssIcon.astro'
 import ReactIcon from './icons/ReactIcon.astro'
+import AstroIcon from './icons/AstroIcon.astro';
+import TailwindIcon from './icons/TailwindIcon.astro';
 
 const TAGS = {
     HTML: {
@@ -20,13 +22,19 @@ const TAGS = {
         class: "bg-transparent tex-[#5ecbf1] ",
         icon: ReactIcon            
     },
+    JAVASCRIPT: {
+        name: "JAVASCRIPT",
+        class: "bg-transparent tex-[#5ecbf1] ",
+        icon: TailwindIcon            
+    },
+    
 };
 
 const PROJECTS = [
     {
-        title: "Spotify maquetización",
+        title: "Spotify Main Screen Layout - April 2024",
         description:
-            "This is a description of Project One. It includes details about the project, its purpose, and how it was built.",
+            "Maquetización de la pantalla principal de Spotify de abril 2024 utilizando componentes de React. Se enfocó en la estructura principal y solo en la interfaz de usuario.",
         link: "https://example.com/project-one",
         github: "https://github.com/username/project-one",
         image: "/projects/sptreact.webp",

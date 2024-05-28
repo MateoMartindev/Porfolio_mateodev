@@ -1,0 +1,45 @@
+---
+
+import OtherStudiesItem from "./OtherStudiesItem.astro";
+import StudiesItem from "./StudiesItem.astro";
+
+const OTHERSTUDIES = [
+  {
+    title: 'Desarrollo web desde cero: HTML5, CSS3, Javascript',
+    company: `
+    Udemy
+    `
+
+  },
+  {
+    title: 'Ultimate GIT: gestiona tus proyectos y trabaja en equipo',
+    company: `
+    Udemy
+    `
+  },
+  {
+    title: 'Bootcamp Frontend Avanzado',
+    company: `
+    Codigofacilito
+    `
+  },
+  {
+    title: 'Introducción al control de versiones con Git',
+    company: `
+    Learn Microsoft
+    `
+  }
+];
+---
+          
+  {
+
+      OTHERSTUDIES.map(otherstudies=> (
+        
+          <OtherStudiesItem {... otherstudies}/>
+        
+
+    ))
+  }      
+</ol>
+

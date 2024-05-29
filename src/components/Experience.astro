@@ -3,44 +3,32 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
-    title: 'Desarrollador web',
+    title: "Desarrollador web",
     description: `
-      Desarrollador Web con enfoque en frontend, especializado en WordPress.
-      Colaboré en la implementación de plantillas y plugins para crear landing
-      pages, home pages y sitios de comercio electrónico. Realicé
-      personalizaciones y optimizaciones de rendimiento mediante la edición del
-      código fuente. Destacado por mejorar la funcionalidad y estética de las
-      tiendas en línea, manteniendo altos estándares de calidad en colaboración
-      estrecha con el equipo.
+    Desarrollador Web especializado en WordPress. Experiencia en la implementación de plantillas y plugins para landing pages y sitios de comercio electrónico. Habilidad en personalización y optimización de rendimiento. Destacado por trabajar en colaboración con el equipo para mejorar la funcionalidad y estética de tiendas en línea.
     `,
-    time: 'Febrero 2021 - Febrero 2024',
-    company: 'Serviwebkr'
+    time: "Febrero 2021 - Febrero 2024",
+    company: "Serviwebkr",
   },
   {
-    title: 'Practicante ingeniería sistemas',
+    title: "Practicante ingeniería sistemas",
     description: `
-      Desarrollo de dashboards interactivos utilizando HTML, CSS y JavaScript.
-      Diseñé interfaces atractivas con Figma para una experiencia de usuario
-      optimizada.
-      Implementación de funcionalidades avanzadas en aplicaciones web con
-      React, mejorando la interactividad y usabilidad.
-      Creación de sistemas web con Node.js y SQL para automatizar procesos
-      y gestionar indicadores clave de rendimiento.
+      Desarrollo de dashboards interactivos utilizando HTML, CSS y JavaScript. Diseñé interfaces atractivas con Figma para una experiencia de usuario optimizada.
+Implementación de funcionalidades avanzadas en aplicaciones web con React, mejorando la interactividad y usabilidad.
+Creación de sistemas web con Node.js y SQL para automatizar procesos y gestionar indicadores clave de rendimiento.
     `,
-    time: 'Febrero 2022 - Diciembre 2022',
-    company: 'Banco de la república'
-  }
+    time: "Febrero 2022 - Diciembre 2022",
+    company: "Banco de la república",
+  },
 ];
 ---
-<ol class="relative border-s border-gray-200 ml-3">            
+
+<ol class="relative border-s border-gray-200 ml-3">
   {
-
-      EXPERIENCE.map(experience=> (
-        <li class="mb-10 ms-4 grid relative md:grid-cols-5 gap-x-2">
-          <ExperienceItem {... experience}/>
-        </li>
-
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4 grid relative md:grid-cols-5 gap-x-2">
+        <ExperienceItem {...experience} />
+      </li>
     ))
-  }      
+  }
 </ol>
-

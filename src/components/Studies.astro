@@ -19,14 +19,13 @@ const STUDIES = [
   }
 ];
 ---
-<ol class="relative border-s border-gray-200 ml-3">            
+<ol class="">            
   {
 
       STUDIES.map(studies=> (
-        <li class="mb-10 ms-4">
+        
           <StudiesItem {... studies}/>
-        </li>
-
+        
     ))
   }      
 </ol>

@@ -1,4 +1,5 @@
 
+
 <style>
     .navbarscrolled {
         transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
@@ -15,6 +16,10 @@
         opacity: .990;
         
     }
+    .active {
+    color: #2dd4bf; /* Color activo según tus necesidades */
+    font-weight: bold; /* Estilo activo según tus necesidades */
+}
 </style>
 
 <header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto fixed z-10">
@@ -24,7 +29,7 @@
         <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#experiencia">Experiencia</a>
         <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#proyectos">Proyectos</a>
         <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#estudios">Estudios</a>
-        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="#contacto">Contacto</a>
+        <a class="px-2 md:px-5 opacity-1 hover:text-[#2dd4bf]" href="mailto:mateomdev7@gmail.com">Contacto</a>
     </nav>
 </header>
 
@@ -42,4 +47,36 @@
                 }
             }
         });
+
+
+
+        const handleScroll = () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            const sectionId = link.getAttribute('href').substring(1);
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const scrollPosition = window.scrollY;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            }
+        });
+    };
+
+    onMount(() => {
+        window.addEventListener('scroll', handleScroll);
+    });
+
+    onCleanup(() => {
+        window.removeEventListener('scroll', handleScroll);
+    });
+
 </script>
